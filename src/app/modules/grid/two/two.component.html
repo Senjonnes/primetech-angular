@@ -1,0 +1,28 @@
+<div class="grid__wrapper">
+  <h4 class="mb-4">Grid: Sorting</h4>
+  <igx-grid
+    [igxPreventDocumentScroll]="true"
+    #grid1
+    [data]="data"
+    [height]="'500px'"
+    width="100%"
+  >
+    <igx-column [sortable]="true" [field]="'Settlement'"></igx-column>
+    <igx-column [sortable]="true" [field]="'Type'"></igx-column>
+    <igx-column [sortable]="true" [field]="'Region'"></igx-column>
+    <igx-column [sortable]="true" [field]="'Country'"></igx-column>
+    <igx-column
+      [sortable]="true"
+      [field]="'Price'"
+      dataType="number"
+      [formatter]="formatCurrency"
+    ></igx-column>
+    <igx-column
+      [sortable]="true"
+      [field]="'Buy'"
+      dataType="number"
+      [formatter]="formatCurrency"
+    >
+    </igx-column>
+  </igx-grid>
+</div>
